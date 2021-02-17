@@ -1,0 +1,263 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+:root {
+  --naranja: #f26627;
+  --bg-color: #efeeee;
+  --text-color: #36363b;
+  --shadow: rgba(0, 0, 0, 0.198);
+  --forum-color: #ffff;
+}
+.dark-theme {
+  --bg-color: #2c2c2c;
+  --text-color: #cfcfcf;
+  --shadow: #fdfdfd0e;
+  --forum-color: #4b4b4b;
+}
+.punto {
+  color: var(--naranja);
+}
+h1,
+h2,
+h3,
+p {
+  color: var(--text-color);
+  font-weight: 500;
+}
+/* botones */
+.toggle-btn {
+  font-size: 180%;
+  border-radius: 3px;
+  border: 2px solid var(--naranja);
+  position: absolute;
+  top: 6%;
+  left: 15%;
+  padding: 8px 8px 6px 8px;
+  color: var(--text-color);
+}
+button {
+  color: var(--text-color);
+}
+.h-menu {
+  cursor: default;
+  display: none;
+}
+/* NAV BAR */
+
+body {
+  transition: 0.3s;
+  background: var(--bg-color);
+}
+
+.bar {
+  float: right;
+  margin: 3vh 6vw;
+}
+.tablink {
+  transition: 0.3s;
+  position: relative;
+  display: inline-block;
+  border: none;
+  background: transparent;
+  margin: 30px;
+  font-size: 1.6rem;
+  outline: 0;
+  color: var();
+}
+.tablink:hover {
+  color: var(--naranja);
+  cursor: pointer;
+}
+.brder {
+  border-bottom: 2px solid var(--naranja);
+}
+
+/* Container de ABOUTME PROJECTS CONTACT */
+.container-categorias {
+  float: left;
+  width: 100vw;
+  background: transparent;
+}
+.container {
+  width: 100%;
+  margin: 0px 0px;
+  text-align: center;
+  display: none;
+  animation: fade 1.3s;
+}
+
+/* About me */
+.about {
+  display: block;
+}
+.nombre {
+  color: var(--naranja);
+}
+.descripcion {
+  margin: 60px;
+}
+
+/* Projects */
+.project-grid {
+  display: grid;
+  padding: 10vh 10vw;
+  grid-template-columns: repeat(3, 1fr);
+}
+.project {
+  width: 80%;
+  background: transparent;
+  height: 105%;
+  box-shadow: 0.5rem 0.5rem 1rem var(--shadow);
+  transition: 0.25s;
+}
+.project:hover {
+  transform: scale(1.05);
+  transition: 0.25s;
+}
+.project img {
+  border: 1px solid gray;
+  width: 99.5%;
+  padding: 0;
+}
+.project-title {
+  padding-top: 2%;
+}
+.project-tec {
+  padding: 10px 0px;
+  font-size: 93%;
+  word-spacing: 1px;
+}
+
+.link {
+  position: relative;
+  padding-bottom: 10px;
+  font-size: 120%;
+  border: none;
+  background: transparent;
+  outline: 0;
+  text-decoration: none;
+  color: var(--text-color);
+}
+.link:hover {
+  color: var(--naranja);
+  cursor: pointer;
+}
+
+/* CONTACT ME */
+.contact {
+}
+.container-contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-form {
+  text-align: left;
+  width: 50%;
+  height: 100%;
+  box-shadow: 0.5rem 0.5rem 1rem var(--shadow);
+  padding: 20px;
+  background: var(--forum-color);
+  border-radius: 5px;
+  color: var(--text-color);
+}
+.form-group {
+  width: 100%;
+  margin-top: 20px;
+  font-size: 20px;
+}
+.form-group input {
+  width: 100%;
+  border: 1px solid rgba(128, 128, 128, 0.199);
+  padding: 10px 0px;
+  font-size: 18px;
+  margin-left: 0px;
+}
+.form-group textarea {
+  width: 100%;
+  font-size: 18px;
+  border: 1px solid rgba(128, 128, 128, 0.199);
+  resize: vertical;
+  font-family: "Open Sans", sans-serif;
+}
+.contact-submit {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 20px 0px;
+  border-radius: 5px;
+  margin-top: 20px;
+  font-size: 20px;
+  transition: 0.25s;
+  color: #36363b;
+}
+.contact-submit:hover {
+  background-color: var(--naranja);
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media (max-width: 700px) {
+  /* botones */
+  .toggle-btn {
+    top: 2%;
+    left: 4%;
+  }
+  .container-categorias {
+    margin-top: 50px;
+    width: 100%;
+  }
+  .bar {
+    position: absolute;
+    visibility: hidden;
+    margin-bottom: 0px;
+  }
+  .tablink {
+    transition: 0s;
+    float: right;
+  }
+  .tablink:first-child {
+    margin-top: 0px;
+  }
+  .h-menu {
+    display: block;
+    float: right;
+    font-size: 180%;
+    margin: 20px;
+    color: var(--naranja);
+  }
+
+  .descripcion {
+    margin: 20px;
+  }
+  .container {
+    position: absolute;
+  }
+  #menu {
+    transition: 0.3s;
+  }
+  /* Projects */
+  .project-grid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 100px;
+  }
+  .project {
+    width: 100%;
+    height: 120%;
+    box-shadow: 0.5rem 0.5rem 1rem var(--shadow);
+  }
+}
