@@ -138,11 +138,11 @@ body {
   grid-template-columns: repeat(3, 1fr);
 }
 .project {
+  transition: 0.3s;
   width: 80%;
   background: transparent;
   height: 105%;
   box-shadow: 0.5rem 0.5rem 1rem var(--shadow);
-  transition: 0.25s;
 }
 .project:hover {
   transform: scale(1.05);
@@ -186,6 +186,7 @@ body {
   justify-content: center;
 }
 .contact-form {
+  transition: 0.3s;
   text-align: left;
   width: 50%;
   height: 100%;
@@ -196,6 +197,7 @@ body {
   color: var(--text-color);
 }
 .form-group {
+  transition: 0.3s;
   width: 100%;
   margin-top: 20px;
   font-size: 20px;
@@ -206,6 +208,7 @@ body {
   padding: 10px 0px;
   font-size: 18px;
   margin-left: 0px;
+  border-radius: 5px;
 }
 .form-group textarea {
   width: 100%;
@@ -213,6 +216,7 @@ body {
   border: 1px solid rgba(128, 128, 128, 0.199);
   resize: vertical;
   font-family: "Open Sans", sans-serif;
+  border-radius: 5px;
 }
 .contact-submit {
   width: 100%;
@@ -241,13 +245,19 @@ body {
 }
 @media (max-width: 700px) {
   /* botones */
+
   .toggle-btn {
     top: 2%;
     left: 4%;
   }
+  /* Container de ABOUTME PROJECTS CONTACT */
+
   .container-categorias {
     margin-top: 50px;
     width: 100%;
+  }
+  .container {
+    position: absolute;
   }
   .bar {
     position: absolute;
@@ -261,6 +271,9 @@ body {
   .tablink:first-child {
     margin-top: 0px;
   }
+
+  /* Menu hamburguesa */
+
   .h-menu {
     display: block;
     float: right;
@@ -269,12 +282,6 @@ body {
     color: var(--naranja);
   }
 
-  .descripcion {
-    margin: 20px;
-  }
-  .container {
-    position: absolute;
-  }
   #menu {
     transition: 0.3s;
   }
@@ -282,6 +289,9 @@ body {
   .nombre {
     width: 80%;
     transform: translate(16%, 0%);
+  }
+  .descripcion {
+    margin: 20px;
   }
   .container-tecnologias {
     width: 100%;
