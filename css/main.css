@@ -134,7 +134,7 @@ body {
 /* Projects */
 .project-grid {
   display: grid;
-  padding: 10vh 10vw;
+  padding: 5vh 10vw;
   grid-template-columns: repeat(3, 1fr);
   row-gap: 80px;
 }
