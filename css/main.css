@@ -136,6 +136,7 @@ body {
   display: grid;
   padding: 10vh 10vw;
   grid-template-columns: repeat(3, 1fr);
+  row-gap: 80px;
 }
 .project {
   transition: 0.3s;
@@ -178,8 +179,7 @@ body {
 }
 
 /* CONTACT ME */
-.contact {
-}
+
 .container-contact {
   display: flex;
   align-items: center;
