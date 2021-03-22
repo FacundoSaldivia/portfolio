@@ -144,6 +144,7 @@ body {
   background: transparent;
   height: 105%;
   box-shadow: 0.5rem 0.5rem 1rem var(--shadow);
+  line-height: 1.6;
 }
 .project:hover {
   transform: scale(1.05);
