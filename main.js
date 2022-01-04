@@ -3,17 +3,16 @@ let toggleBtn = document.querySelector(".toggle-btn");
 
 let currentTheme = localStorage.getItem("currentTheme");
 
-if (currentTheme) {
+if (!currentTheme) {
   body.classList.add("dark-theme");
 }
 toggleBtn.addEventListener("click", function () {
   body.classList.toggle("dark-theme");
-  toggleBtn.style.transform = "rotate(180deg)";
 
   if (body.classList.contains("dark-theme")) {
-    localStorage.setItem("currentTheme", "themeActive");
-  } else {
     localStorage.removeItem("currentTheme");
+  } else {
+    localStorage.setItem("currentTheme", "themeActive");
   }
 });
 
